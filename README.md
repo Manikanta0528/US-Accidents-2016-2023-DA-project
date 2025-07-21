@@ -1,96 +1,89 @@
-🚗 US Accidents Data Analysis (2016–2023)
-This project analyzes motor vehicle accidents in the United States from 2016 to 2023 using a large dataset containing over 7 million records, sourced from the internet. The goal is to understand trends, geographical distributions, and contributing factors to accidents, with a focus on weather, traffic, time, and location.
+# 🚗 US Accidents Data Analysis (2016–2023)
 
-📁 Dataset Overview
+This project analyzes motor vehicle accidents in the United States from 2016 to 2023 using a dataset containing over **7 million records**, sourced from [Kaggle](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents). The goal is to explore patterns related to location, weather, and time, and to gain insights for accident prevention.
+
+---
+
+## 📁 Dataset Overview
+
 The dataset includes key features such as:
 
-📍 Location: City, State, Latitude, Longitude
+- 📍 **Location**: City, State, Latitude, Longitude  
+- 🕒 **Time**: Start Time, End Time  
+- 📊 **Severity**: Scale from 1 (least severe) to 4 (most severe)  
+- 🌦️ **Weather**: Conditions, Temperature, Wind Speed, Visibility  
+- 🚧 **Road Features**: Presence of bumps, curves, junctions  
+- 🚦 **Traffic Influence**  
 
-🕒 Time: Start Time, End Time
+> ⚠️ **Note**: Data for **New York City** is missing.
 
-📊 Severity: Scale from 1 to 4
+---
 
-🌦️ Weather: Conditions, Temperature, Wind Speed, Visibility
+## 🧹 Data Cleaning
 
-🚧 Road Conditions: Presence of bumps, curves, junctions
+- Removed columns with excessive missing values.
+- Handled missing temperature, visibility, and wind data.
+- Converted time columns to datetime format.
+- Filtered out invalid entries and outliers.
 
-🚦 Traffic Influence
+---
 
-⚠️ Note: Data for New York City is missing, despite its population and significance.
+## 📊 Exploratory Data Analysis (EDA)
 
-🧹 Data Cleaning
-Removed columns with high missing values to ensure quality.
+### Key Discoveries
 
-Ensured datetime columns were in proper format.
+- **City Distribution**: A few cities account for most accidents, while **1000+ cities** recorded only one accident.
+- **Time of Day**: Peak accidents happen between **6–10 AM** and **3–6 PM**.
+- **Weekdays vs Weekends**: Accidents are more frequent on **weekdays**.
+- **Weather**: Most accidents happen in **clear weather**.
+- **Temperature**: Accident severity has minor correlation with temperature.
 
-Identified and handled outliers in numerical data.
+---
 
-📊 Exploratory Data Analysis (EDA)
-Key Discoveries:
-City Distribution: A few cities account for most accidents, while 1000+ cities had only one recorded accident.
+## ❓ Questions Explored
 
-Day of Week: Weekdays see more accidents than weekends.
+1. Are there more accidents in warmer or colder areas?
+2. Which five states have the highest number of accidents?
+3. Is New York City in the dataset?
+4. Among the top 100 cities with most accidents, which states are represented?
+5. What are the most accident-prone times of day?
+6. How do weekdays compare with weekends in terms of accident frequency?
+7. What are the peak months for accidents?
+8. What are the trends year by year?
+9. When are accidents per traffic volume highest?
+10. How are hourly accident rates distributed?
+11. How does weather affect accident occurrence?
+12. Is there a correlation between temperature and accident severity?
 
-Weather Conditions: Surprisingly, many accidents occurred under fair weather.
+---
 
-Time of Day: Peak hours were 6 AM – 10 AM and 3 PM – 6 PM.
+## 📈 Data Visualization (Tableau)
 
-Yearly Trends: Fluctuations observed year over year, possibly due to changing traffic laws or societal behavior.
+Visualizations created:
 
-❓ Questions Explored
-Are there more accidents in warmer or colder regions?
+- 🗺️ **Heat Maps**: Accident density using lat/lon data.
+- 📊 **Bar Charts**: Accidents by state, city, and weather.
+- 📉 **Line Graphs**: Yearly/monthly trends of accidents.
 
-Which five states have the most accidents?
+---
 
-Also analyzed accidents per capita.
+## 🧰 Tools & Technologies
 
-Is New York City present in the data?
+- Python (Pandas, NumPy, Seaborn, Matplotlib)
+- Tableau for interactive dashboards
+- Jupyter Notebook for analysis
 
-Among the top 100 cities, which states dominate?
+---
 
-Which times of day are most accident-prone?
+## 📎 License
 
-How do weekdays vs weekends compare?
+This project is for educational purposes. The dataset is publicly available on [Kaggle](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents).
 
-What are the peak months for accidents?
+---
 
-What are the yearly trends in accident numbers?
+## 🙌 Acknowledgments
 
-When are accidents per traffic unit the highest?
+Thanks to the open-source community and Kaggle for providing accessible, high-quality data.
 
-How are accidents distributed hourly across weekdays/weekends?
+---
 
-What is the impact of weather on accident rates?
-
-Does temperature influence severity?
-
-📌 Key Insights
-🚫 Missing NYC Data: A major gap in the dataset.
-
-📉 Skewed Distribution: Only <8% of cities report more than 1000 accidents.
-
-🏙️ Sparse Cities: Over 1000 cities report only a single accident.
-
-📅 Weekday Traffic: Heavier accident rates compared to weekends.
-
-📈 Data Visualization (via Tableau)
-🗺️ Heat Maps: Visualized accident density using latitude & longitude.
-
-📊 Bar Charts: Displayed accident counts by state, city, and weather.
-
-📉 Line Graphs: Showed accident trends across months and years.
-
-Visualizations were created to reveal patterns and support strategic decision-making.
-
-🧰 Tools & Technologies
-Python (Pandas, NumPy, Matplotlib, Seaborn)
-
-Tableau for interactive dashboards
-
-Jupyter Notebook for analysis
-
-📎 License
-This project is for educational and analytical purposes only. Data is sourced from publicly available platforms(Kaggle).
-
-🙌 Acknowledgments
-Thanks to the creators of the US Accidents dataset and the open-source community for supporting data-driven insights.
